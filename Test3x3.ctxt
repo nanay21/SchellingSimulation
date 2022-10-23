@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Test3x3
+comment0.text=\r\n\ \ This\ \ class\ models\ Schelling's\ model\ of\ segregation\r\n\ \ to\ group\ pixels\ in\ cells\ that\ meet\ the\ \r\n\ \ satisfaction\ threshold.\r\n\r\n\ \ @author\ Nana\ Yaw\ Barimah\ Oteng\r\n\ \ @version\ (200.02.28)\r\n
+comment1.params=
+comment1.target=Test3x3()
+comment1.text=\r\n\ Initializes\ a\ newly\ created\ Test3x3\ object.\r\n
+numComments=2

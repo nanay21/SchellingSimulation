@@ -1,0 +1,37 @@
+#BlueJ class context
+comment0.target=SchellingSimulation
+comment0.text=\r\n\ \ This\ \ class\ models\ Schelling's\ model\ of\ segregation\r\n\ \ to\ group\ pixels\ in\ cells\ that\ meet\ the\ \r\n\ \ satisfaction\ threshold.\r\n\r\n\ \ @author\ Nana\ Yaw\ Barimah\ Oteng\r\n\ \ @version\ (200.02.28)\r\n
+comment1.params=width\ height
+comment1.target=SchellingSimulation(int,\ int)
+comment1.text=\r\n\ Initializes\ a\ newly\ created\ SchellingSimulation\ object.\r\n\ \r\n\ satisfactionThreshold\ \=\ A\ field\ holding\ a\ double\ value\ \r\n\ that\ indicates\ the\ satisfaction\ \r\n\ threshold\ for\ all\ agents\ in\ the\ simulation\r\n\ \r\n\ redline\ \=\ An\ integer\ value\ representing\ a\ \r\n\ horizontal\ dividing\ line\ (a\ y-coordinate)\ indicating\ \r\n\ a\ neighborhood\ boundary.\ Orange\ \ pixels\ \r\n\ (representing\ O\ agents)\ are\ restricted\ \r\n\ to\ y\ coordinates\ greater\ than\ or\ \r\n\ equal\ to\ this\ value.\r\n\ @param\ width\ sets\ the\ width\ of\ the\ picture\r\n\ @param\ height\ sets\ the\ height\ of\ the\ picture\r\n
+comment10.params=pixel1
+comment10.target=boolean\ maybeRelocate(student.media.Pixel)
+comment10.text=\r\n\ Takes\ one\ Pixel\ object\ as\ a\ parameter\ and\ \r\n\ returns\ a\ boolean\ result.\ This\ method\ tries\ to\ \r\n\ move\ the\ corresponding\ agent\ to\ a\ new\ pixel\ location.\ \r\n\ This\ involves\ picking\ a\ new\ random\ x/y\ location\ in\ \r\n\ the\ image\ (below\ the\ redline,\ if\ the\ current\ pixel\ \r\n\ is\ occupied\ by\ an\ orange\ agent).\ If\ the\ selected\ location\ \r\n\ is\ empty,\ and\ if\ the\ current\ agent\ would\ be\ satisfied\ at\ \r\n\ the\ new\ location,\ then\ "move"\ the\ agent\ by\ setting\ \r\n\ the\ new\ location's\ color\ to\ the\ current\ pixel's\ color\ \r\n\ and\ setting\ the\ current\ pixel's\ color\ to\ Color.WHITE.\ \r\n\ Otherwise,\ leave\ the\ current\ agent\ in\ place,\ if\ it\ \r\n\ cannot\ be\ moved\ to\ the\ selected\ destination.\ \r\n\ Return\ true\ if\ the\ agent\ is\ moved,\ \r\n\ or\ false\ if\ the\ attempt\ to\ move\ fails.\r\n\ @param\ pixel1\ this\ is\ the\ pixel\ object\ being\ checked\ to\r\n\ see\ if\ it's\ satisfied\ by\ the\ new\ location\r\n\ @return\ returns\ true\ if\ it\ is\ satisfied\ by\ the\ new\r\n\ location.\ Otherwise,\ it\ returns\ false.\r\n
+comment11.params=
+comment11.target=int\ cycleAgents()
+comment11.text=\r\n\ Takes\ no\ parameters\ and\ returns\ an\ integer\ result.\ \r\n\ This\ method\ uses\ a\ loop\ over\ all\ pixels,\ checking\ \r\n\ each\ pixel\ in\ turn.\ If\ the\ pixel\ is\ empty,\ \r\n\ leave\ it\ alone.\ If\ it\ is\ occupied,\ check\ to\ see\ if\ \r\n\ the\ agent\ there\ is\ satisfied--if\ so,\ leave\ the\ agent\ \r\n\ alone.\ Otherwise,\ attempt\ to\ relocate\ it\ to\ a\ new\ \r\n\ position\ (which\ could\ succeed\ or\ fail,\ as\ described\ \r\n\ under\ maybeRelocate().\ The\ method\ returns\ the\ total\ \r\n\ number\ of\ successful\ moves\ after\ processing\ all\ pixels.\ \r\n\ @return\ returns\ the\ total\ number\ of\ succesful\ moves\ \r\n\ after\ all\ pixels\ have\ been\ ran\ through.\r\n\ \r\n
+comment2.params=
+comment2.target=double\ getSatisfactionThreshold()
+comment2.text=\r\n\ A\ getter\ method\ that\ returns\ the\ satisfaction\r\n\ threshold\ (a\ double).\r\n\ @return\ returns\ the\ value\ of\ the\ satisfaction\r\n\ threshold.\r\n
+comment3.params=value
+comment3.target=void\ setSatisfactionThreshold(double)
+comment3.text=\r\n\ A\ setter\ method\ that\ takes\ a\ double\r\n\ parameter\ and\ changes\ the\ \r\n\ satisfaction\ threshold\ to\ the\ specified\ value.\r\n\ @param\ value\ intitializes\r\n\ the\ satisfaction\ threshold.\r\n
+comment4.params=
+comment4.target=int\ getRedLine()
+comment4.text=\r\n\ A\ getter\ method\ that\ returns\ the\r\n\ redline\ value\ (an\ int).\r\n\ @return\ returns\ the\ value\ of\ the\ \r\n\ RedLine.\r\n
+comment5.params=value
+comment5.target=void\ setRedLine(int)
+comment5.text=\r\n\ A\ setter\ method\ that\ takes\ a\ double\r\n\ parameter\ and\ changes\ the\ \r\n\ satisfaction\ threshold\ to\ the\ specified\ value.\r\n\ @param\ value\ intitializes\r\n\ the\ redLine\ value.\r\n
+comment6.params=bluePercentage\ orangePercentage
+comment6.target=void\ populate(double,\ double)
+comment6.text=\r\n\ Takes\ two\ double\ parameters\ between\ 0.0\ -\ 1.0\ that\ \r\n\ represent\ percentages.\ This\ method\ will\ "paint"\ \r\n\ the\ image\ with\ a\ randomized\ collection\ of\ blue\ and\r\n\ orange\ pixels.\ The\ first\ parameter\ represents\ the\ \r\n\ probabilty\ of\ any\ pixel\ in\ the\ image\ being\ set\ to\ \r\n\ blue\ (representing\ an\ X\ agent).\ The\ second\ represents\ \r\n\ the\ probability\ of\ any\ pixel\ in\ the\ image\ (below\ the\ redline)\ \r\n\ being\ set\ to\ orange\ (representing\ an\ O\ agent).\ \r\n\ Other\ pixels\ will\ be\ left\ alone\ \r\n\ (empty,\ represented\ by\ \ white\ ).\r\n\ @param\ bluePercentage\ is\ the\ percentage\ probability\ of\ a\ pixel\ \r\n\ being\ set\ to\ blue.\r\n\ @param\ orangePercentage\ is\ the\ percentage\ probability\ of\ a\ pixel\r\n\ below\ the\ RedLine\ being\ set\ to\ orange.\r\n
+comment7.params=pixel1\ pixel2
+comment7.target=boolean\ areSameColor(student.media.Pixel,\ student.media.Pixel)
+comment7.text=\r\n\ Takes\ two\ Pixel\ objects\ and\ returns\ a\ \r\n\ boolean\ value\ indicating\ whether\ \r\n\ the\ two\ pixels\ have\ the\ same\ color.\r\n\ @param\ pixel1\ is\ the\ first\ pixel\ \r\n\ object\ being\ compared\ to\ pixel2\ to\ see\r\n\ if\ they\ are\ the\ same\ color.\r\n\ @param\ pixel2\ is\ the\ second\ pixel\ \r\n\ object\ being\ compared\ to\ pixel1\ to\ see\r\n\ if\ they\ are\ the\ same\ color.\r\n\ @return\ returns\ true\ if\ the\ pixels\ are\ the\ same\r\n\ color\ and\ returns\ false\ if\ they\ are\ not\ the\ same\ \r\n\ color.\r\n
+comment8.params=pixel1
+comment8.target=boolean\ isEmpty(student.media.Pixel)
+comment8.text=\r\n\ Takes\ one\ Pixel\ object\ and\ returns\ true\ \r\n\ if\ its\ color\ is\ Color.WHITE,\ representing\ \r\n\ an\ empty\ location.\r\n\ @return\ returns\ true\ if\ the\ color\ of\ a\ cell\r\n\ is\ white,\ and\ returns\ false\ if\ the\ cell\ isn't\ \r\n\ white.\r\n\ \r\n\ @param\ pixel1\ is\ a\ pixel\ object\ that\ is\ checked\r\n\ to\ see\ if\ it's\ white.\r\n
+comment9.params=pixel1\ color
+comment9.target=boolean\ isSatisfied(student.media.Pixel,\ java.awt.Color)
+comment9.text=\r\n\ Takes\ one\ pixel\ object\ and\ a\ color\ value,\ \r\n\ and\ returns\ a\ boolean\ result\ indicating\ whether\ \r\n\ an\ agent\ of\ the\ specified\ Color\ would\ be\ satisfied\r\n\ at\ the\ given\ Pixel\ location.\ It\ should\ return\ true\ \r\n\ if\ there\ are\ no\ neighboring\ agents,\ or\ if\ the\ \r\n\ proportion\ of\ neighboring\ agents\ the\ same\ color\ as\ \r\n\ the\ parameter\ meets\ or\ exceeds\ the\ satisfaction\ threshold.\r\n\ @return\ returns\ true\ if\ a\ pixel\ is\ satisfied\ at\ a\ new\ location\r\n\ and\ returns\ false\ if\ it\ wouldn't\ be\ satisfied.\r\n\ @param\ pixel1\ is\ the\ pixel\ being\ checked\ for\ satisfaction\r\n\ @param\ color\ is\ the\ color\ of\ the\ pixel\ being\ checked.\r\n
+numComments=12
